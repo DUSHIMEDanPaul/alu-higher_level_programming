@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-def copy_list(l):
-    return l.copy()
+a = 5
+b = 5
+print (a+b)
