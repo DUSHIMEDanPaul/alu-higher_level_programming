@@ -8,7 +8,7 @@ headers = {
     '\n    AppleWebKit/537.36 (KHTML, like Gecko)'
     '\n    Chrome/99.0.4844.84 Safari/537.36',
 }
-# this is my work professor
+# this is my work professors
 req = urllib.request.Request(url, headers=headers)
 with urllib.request.urlopen(req) as response:
     content = response.read()
