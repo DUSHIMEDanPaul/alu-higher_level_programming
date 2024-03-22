@@ -2,6 +2,7 @@
 """ A script that sends POST request
 """
 
+# this is a work
 
 if __name__ == '__main__':
     from urllib.request import urlopen, Request

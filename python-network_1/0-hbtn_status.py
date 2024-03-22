@@ -8,6 +8,7 @@ headers = {
     '\n    AppleWebKit/537.36 (KHTML, like Gecko)'
     '\n    Chrome/99.0.4844.84 Safari/537.36',
 }
+# this is my work
 
 req = urllib.request.Request(url, headers=headers)
 with urllib.request.urlopen(req) as response:
@@ -16,3 +17,5 @@ with urllib.request.urlopen(req) as response:
     print("\t- type:", type(content))
     print("\t- content:", content)
     print("\t- utf8 content:", content.decode("utf-8"))
+
+    
