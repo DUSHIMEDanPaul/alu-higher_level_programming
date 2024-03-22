@@ -1,2 +1,4 @@
- URL and displays the size of the response body
-curl -sI "$1" | grep -i Content-Length | cut -d " " -f2
+#!/bin/bash 
+# take in a url and display the content 
+curl -sI "$1" | grep 'Content-Length'| cut -d " " -f2
+
