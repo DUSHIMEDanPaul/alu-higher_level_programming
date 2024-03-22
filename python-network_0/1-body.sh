@@ -1,2 +1,3 @@
-cript that send GET request and displays the body of response
-curl -sL $1
+#!/bin/bash 
+# take in a url and display the content 
+curl -sI "$1" | grep 'Content-Length'| cut -d " " -f2
