@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Python script that fetchs."""
-
+# this is a work
 
 import requests
 if __name__ == "__main__":
