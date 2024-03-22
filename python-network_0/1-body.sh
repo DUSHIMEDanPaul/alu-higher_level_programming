@@ -1,2 +1,3 @@
-cript that send GET request and displays the body of response
-curl -sL $1
+#!/bin/bash 
+# display the body of a file 
+curl -sLfG "$1"
