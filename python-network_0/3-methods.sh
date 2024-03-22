@@ -1,7 +1,3 @@
 #!/bin/bash
-# get all the allowed methods 
-<<<<<<< HEAD
-curl -sI "$1" | grep "Allow: " | cut -d " " -f 2-
-=======
-curl -sI "$1" | grep "Allow: " | cut -d " " -f 2-
->>>>>>> 9bc55d9b852094cb1b4b6ffc53e5914ce0475a9f
+#  a script that takes in a URL and displays all HTTP methods the server will accept
+curl -sI "$1" | grep "Allow" | cut -d " " -f2-
