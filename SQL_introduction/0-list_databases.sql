@@ -1,2 +1,2 @@
--- Code To Show All Database By Black Devil
+-- Lists all databases of my MySQL server
 SHOW DATABASES;

@@ -1,2 +1,2 @@
--- describe the create table with black devil
+-- full table
 SHOW CREATE TABLE first_table;
