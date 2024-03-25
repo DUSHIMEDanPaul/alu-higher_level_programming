@@ -4,7 +4,7 @@
 - sends a request to the URL
 - displays the body of the response (decoded in utf-8).
 """
-# this is a work
+
 
 if __name__ == "__main__":
     import sys

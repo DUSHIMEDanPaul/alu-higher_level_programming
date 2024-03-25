@@ -1,2 +1,2 @@
--- inserts all by chriss
-INSERT INTO first_table(id,name) VALUES(89,'Best School');
+-- Insert a new row
+INSERT INTO first_table VALUES(89, "Best School")

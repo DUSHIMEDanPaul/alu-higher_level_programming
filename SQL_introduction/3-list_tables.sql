@@ -1,2 +1,2 @@
--- Show All Tables in X database by black devil
+-- Show All Tables in X database by Duel
 SHOW TABLES;
