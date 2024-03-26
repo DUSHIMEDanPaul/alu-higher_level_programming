@@ -1,0 +1,26 @@
+import unittest
+
+def add_integer(a, b=98):
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
+    return int(a) + int(b)
+
+class TestAddInteger(unittest.TestCase):
+    def test_add_integer(self):
+        self.assertEqual(add_integer(1, 2), 3)
+        self.assertEqual(add_integer(100), 198)
+        self.assertEqual(add_integer(1.5, 2.5), 3)
+        self.assertEqual(add_integer(-1, -2), -3)
+
+    def test_add_integer_errors(self):
+        with self.assertRaises(TypeError):
+            add_integer('a', 1)
+        with self.assertRaises(TypeError):
+            add_integer(1, 'b')
+        with self.assertRaises(TypeError):
+            add_integer('a', 'b')
+
+if __name__ == '__main__':
+    unittest.main()
