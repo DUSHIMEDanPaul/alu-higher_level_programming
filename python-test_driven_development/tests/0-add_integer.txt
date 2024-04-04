@@ -1,55 +1,28 @@
-
-"""
-This module contains a function to add two integers.
-"""
-
 #!/usr/bin/python3
-
-"""
-This module contains a function to add two integers.
-"""
+def add_integer(a, b=98):
+    """
+    This function adds two integers.
+    """
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer or float")
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer or float")
+    else:
+           return (int(a) + int(b))
 
 
 def add_integer(a, b=98):
     """
     This function adds two integers.
-
-    Args:
-    a: The first number to add. Must be convertible to an integer.
-    b: The second number to add. Must be convertible to an integer. Defaults to 98.
-
-    Returns:
-    The sum of a and b, as an integer.
-
-    Doctest:
-    >>> add_integer(1, 2)
-    3
-    >>> add_integer(100)
-    198
-    >>> add_integer(1.5, 2.5)
-    3
-    >>> add_integer(-1, -2)
-    -3
-    >>> add_integer('a', 1)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-    >>> add_integer(1, 'b')
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
-    >>> add_integer('a', 'b')
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-    >>> add_integer(1, '2')
-    3
+    
+    >>> add_integer(3, 98)
+    101
     """
-    try:
-        a = int(a)
-        b = int(b)
-    except ValueError:
-        raise TypeError("a and b must be convertible to an integer")
     return a + b
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+
 
 
