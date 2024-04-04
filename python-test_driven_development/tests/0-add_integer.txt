@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-def add_integer(a, b=98):
-    """
-    This function adds two integers.
-    """
-    if not isinstance(a, (int, float)):
-        raise TypeError("a must be an integer or float")
-    if not isinstance(b, (int, float)):
-        raise TypeError("b must be an integer or float")
-    else:
-           return (int(a) + int(b))
+# this is the module 0-add_integer.py
 
+"""
+this module add two integers a and b
+"""
 
 def add_integer(a, b=98):
     """
@@ -17,12 +11,18 @@ def add_integer(a, b=98):
     
     >>> add_integer(3, 98)
     101
+    >>> add_integer(1,2)
+    3
+    >>> add_integer(1, -2)
+    -1
+    >>> add_integer(1.4, 2)
+    3.4
+    >>> add_integer(1, "2")
+    Traceback (most recent call last):
+    ...
+    TypeError: can only concatenate str (not "int") to str
     """
     return a + b
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
 
 
 
