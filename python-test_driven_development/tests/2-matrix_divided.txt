@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 This module '2-matrix_divided.py' divides elements of a matrix. 
 Elements of the matrix will be either integers or floats, 
@@ -44,22 +43,35 @@ def test_matrix_divided():
     except ZeroDivisionError as e:
         assert str(e) == "division by zero"
 
+        def divide_matrix(matrix, div):
+    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
+        return "TypeError: matrix must be a matrix (list of lists) of integers/floats"
+    if not all(len(row) == len(matrix[0]) for row in matrix):
+        return "TypeError: matrix must have each row with the same size"
+    if not isinstance(div, (int, float)):
+        return "TypeError: div must be a number"
+    if div == 0:
+        return "ZeroDivisionError: division by zero"
+    return [[round(num / div, 2) if not (isinstance(num, float) and num > 1e308) else 0.0 for num in row] for row in matrix]
+    # Test with a matrix that contains infinity and is divided by an integer
+    matrix = [[1, 2, 3], [4, float('inf')]]
+    div = 2
+    assert divide_matrix(matrix, div) == [[0.5, 1.0, 1.5], [2.0, 0.0]]
 
+    # Test with a matrix that contains infinity and is divided by infinity
+    matrix = [[1, 2, 3], [4, float('inf')]]
+    div = float('inf')
+    assert divide_matrix(matrix, div) == [[0.0, 0.0, 0.0], [0.0, 0.0]]
 
-        # Test cases
-print(divide_matrix([[1, 2], [3, 4]], 2))  # Should return [[0.5, 1.0], [1.5, 2.0]]
-print(divide_matrix([[1, 2], [3, 4]], '2'))  # Should return "TypeError: div must be a number"
-print(divide_matrix([[1, 2], [3, 4]], 0))  # Should return "ZeroDivisionError: division by zero"
-print(divide_matrix([1, 2, 3, 4], 2))  # Should return "TypeError: matrix must be a matrix (list of lists) of integers/floats"
-print(divide_matrix([[1, 2], [3]], 2))  # Should return "TypeError: matrix must have each row with the same size"
-print(divide_matrix([[1, 2], [3, 4]], float('inf')))  # Should return [[0.0, 0.0], [0.0, 0.0]]
-print(divide_matrix([[1, 2], [3, float('inf')]], 2))  # Should return [[0.5, 1.0], [1.5, 0.0]]
-print(divide_matrix([[1, 2], [3, float('inf')]], float('inf')))  # Should return [[0.0, 0.0], [0.0, 0.0]]
-# Test cases for missing arguments
-print(divide_matrix())  # Should return "TypeError: divide_matrix() missing 2 required positional arguments: 'matrix' and 'div'"
-print(divide_matrix([[1, 2], [3, 4]]))  # Should return "TypeError: divide_matrix() missing 1 required positional argument: 'div'"
+    # Test with missing one argument
+    try:
+        divide_matrix([[1, 2], [3, 4]])
+    except TypeError as e:
+        assert str(e) == "TypeError: divide_matrix() missing 1 required positional argument: 'div'"
 
+    # Test with missing two arguments
+    try:
+        divide_matrix()
+    except TypeError as e:
+        assert str(e) == "TypeError: divide_matrix() missing 2 required positional arguments: 'matrix' and 'div'"
         """
-
-if __name__ == "__main__":
-    test_matrix_divided()
