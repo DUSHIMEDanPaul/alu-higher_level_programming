@@ -1,13 +1,8 @@
-#!/usr/bin/python3
-# this is the module 0-add_integer.py
+from 0-add_integer import add_integer
 
-"""
-this module add two integers a and b
-"""
-
-def add_integer(a, b=98):
+def test_add_integer():
     """
-    This function adds two integers.
+    This function tests the add_integer function.
     
     >>> add_integer(3, 98)
     101
@@ -22,7 +17,12 @@ def add_integer(a, b=98):
     ...
     TypeError: can only concatenate str (not "int") to str
     """
-    return a + b
+    pass
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+
 
 
 
