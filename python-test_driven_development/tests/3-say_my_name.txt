@@ -17,11 +17,11 @@ def say_my_name(first_name, last_name=""):
     the following function takes two names though it will rejects arguments that are not strings
 
     >>> say_my_name("John", "Smith")
-    John Smith
+    My name is John Smith
     >>> say_my_name("Bob", "Lenon")
-    Bob Lenon
+   My name is  Bob Lenon
     >>> say_my_name("Bob")
-    Bob
+   My name is  Bob
     >>> say_my_name(12, "Lenon")
     Traceback (most recent call last):
     ...
