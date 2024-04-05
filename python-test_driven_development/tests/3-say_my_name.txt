@@ -1,21 +1,32 @@
-#!/usr/bin/python3
+"""
+This module defines a function say_my_name which prints a greeting using the provided names.
+
+The function takes two arguments: first_name and last_name. Both should be strings.
+If no last_name is provided, it defaults to an empty string.
+"""
+
 def say_my_name(first_name, last_name=""):
     """
     the following function takes two names though it will rejects arguments that are not strings
 
     >>> say_my_name("John", "Smith")
     John Smith
-    >>> say_my_name("Walter", "White")
-    Walter White
+    >>> say_my_name("Bob", "Lenon")
+    Bob Lenon
     >>> say_my_name("Bob")
     Bob
-    >>> say_my_name(12, "White")
+    >>> say_my_name(12, "Lenon")
     Traceback (most recent call last):
     ...
     TypeError: first_name must be a string
+    >>> say_my_name("Bob", 12)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
     print(f"My name is {first_name} {last_name}")
+
