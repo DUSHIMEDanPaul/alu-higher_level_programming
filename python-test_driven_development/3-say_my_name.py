@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def say_my_name(first_name, last_name=""):
     """
     the following function takes two names though it will rejects arguments that are not strings
