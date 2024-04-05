@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+===========================
+Test 3-say_my_name.py
+==========================
+
 say_my_name = __import__('3-say_my_name').say_my_name
 
 """
@@ -7,7 +11,7 @@ This module defines a function say_my_name which prints a greeting using the pro
 The function takes two arguments: first_name and last_name. Both should be strings.
 If no last_name is provided, it defaults to an empty string.
 """
-
+Regular tests
 def say_my_name(first_name, last_name=""):
     """
     the following function takes two names though it will rejects arguments that are not strings
