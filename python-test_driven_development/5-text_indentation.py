@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"""Define text-identation function Below."""
+
 def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
@@ -11,4 +14,3 @@ def text_indentation(text):
     text = '\n'.join(lines)
     
     print(text)
-
