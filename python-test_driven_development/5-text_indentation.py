@@ -21,4 +21,3 @@ def text_indentation(text):
                 yy += 1
             continue
         yy += 1
-
