@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-"""Define text-identation function Below."""
+def text_indentation(text):
+    """
+    Add two new lines after each '.', '?' and ':' in the text.
+    Remove spaces at the beginning or end of each printed line.
+    """
+    ...
+
 
 def text_indentation(text):
     if not isinstance(text, str):

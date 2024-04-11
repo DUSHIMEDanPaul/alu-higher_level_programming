@@ -19,6 +19,25 @@ class TestTextIndentation(unittest.TestCase):
         self.assertEqual(text_indentation("Holberton School"), "Holberton School")
         self.assertEqual(text_indentation("Holberton.School"), "Holberton.\n\nSchool")
         self.assertEqual(text_indentation("Holberton. School? How are you: John"), "Holberton.\n\nSchool?\n\nHow are you:\n\nJohn")
+    def test_no_special_chars(self):
+        self.assertEqual(text_indentation("Holberton School"), "Holberton School")
+    def test_period(self):
+    self.assertEqual(text_indentation("Holberton.School"), "Holberton.\n\nSchool")
+
+    def test_multiple_special_chars(self):
+        self.assertEqual(text_indentation("Holberton. School? How are you: John"), "Holberton.\n\nSchool?\n\nHow are you:\n\nJohn")
+
+    def test_non_string_input(self):
+    with self.assertRaises(TypeError):
+        text_indentation(12)
+
+    def test_string_with_blank_line(self):
+        self.assertEqual(text_indentation("Hello\n\nWorld"), "Hello\n\nWorld")
+
+    def test_missing_argument(self):
+    with self.assertRaises(TypeError):
+        text_indentation()
+
 
     def test_non_string_input(self):
         with self.assertRaises(TypeError):
