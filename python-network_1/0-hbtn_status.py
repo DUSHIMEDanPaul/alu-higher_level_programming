@@ -6,11 +6,11 @@ using the urllib package.
 
 import urllib.request
 
-url = 'https://alu-intranet.hbtn.io/status'
+url = 'http://0.0.0.0:5050/status'
 
 with urllib.request.urlopen(url) as response:
     html = response.read()
     print("\t- type: {}".format(type(html)))
     print("\t- content: {}".format(html))
-    print("\t- utf8 content: {}".format(html.decode('utf-8')))
+    print("\t- utf8 content: {}".format(html.decode('utf-8'))) 
 
