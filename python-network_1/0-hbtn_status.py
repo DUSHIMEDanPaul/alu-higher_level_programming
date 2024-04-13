@@ -16,4 +16,3 @@ if __name__ == "__main__":
         print("\t- content:", content)
         print("\t- utf8 content:", content.decode("utf-8"))
 
-
